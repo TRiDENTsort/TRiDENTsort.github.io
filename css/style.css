@@ -1,5 +1,5 @@
 body {
-    background-color: #000000;
+    background-color: #7e0000;
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
     font-size: 16px;
     color: #FFFFFF;
@@ -17,7 +17,7 @@ a, a:hover {
 #btn-rawtext {
     cursor: pointer;
     color: #000000;
-    background-color: #000000;
+    background-color: #7e0000;
     width: 150px;
     padding: 2px;
     border: 3px solid #FFFFFF;
@@ -31,7 +31,7 @@ a, a:hover {
     height: 50px;
     top: 0;
     left: 0;
-    background-color: #000000;
+    background-color: #7e0000;
     z-index: 1;
     text-align: center;
     border-bottom-color: #FFFFFF;
@@ -63,12 +63,12 @@ a, a:hover {
 }
 
 .resTable thead {
-    background-color: #000000;
+    background-color: #7e0000;
     color: #FFFFFF;
 }
 
 .resTable tbody, #fldLeft, #fldMiddleT, #fldRight, #fldMiddleB {
-    background-color: #000000;
+    background-color: #7e0000;
 }
 
 img {
