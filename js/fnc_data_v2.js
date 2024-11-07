@@ -68,7 +68,7 @@ var ary_CharacterData = [
   [1, "SURVIVOR",                                         [0,1,0,0,0,0,0,0,0,0,0,0], "albums/AdvanceGeneration.jpg"],
   [1, "Dystopia",                                         [0,1,0,0,0,0,0,0,0,0,0,0], "albums/AdvanceGeneration.jpg"],
   [1, "Ambivalent",                                       [0,1,0,0,0,0,0,0,0,0,0,0], "albums/AdvanceGeneration.jpg"],
-  [1, "Brand New World'",                                 [0,1,0,0,0,0,0,0,0,0,0,0], "albums/AdvanceGeneration.jpg"],
+  [1, "Brand New World",                                  [0,1,0,0,0,0,0,0,0,0,0,0], "albums/AdvanceGeneration.jpg"],
   [1, "Continue",                                         [0,1,0,0,0,0,0,0,0,0,0,0], "albums/AdvanceGeneration.jpg"],
   [1, "Supernova",                                        [0,1,0,0,0,0,0,0,0,0,0,0], "albums/AdvanceGeneration.jpg"],
   [1, "Re:ply",                                           [0,1,0,0,0,0,0,0,0,0,0,0], "albums/AdvanceGeneration.jpg"],
