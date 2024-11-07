@@ -62,31 +62,6 @@ function startup() {
    var tbl_body_Select = cE('tbody');
    tbl_Select.appendChild(tbl_body_Select);
 
-   // タイトルから選択用チェックボックスに変換
-   for (i=0; i<ary_TitleData.length; i++) {
-      // Row[i]
-      if ((i % int_Colspan) == 0) {
-         var new_row = tbl_body_Select.insertRow(tbl_body_Select.rows.length);
-         new_row.id = 'optSelRow' + i;
-      }
-      // Col[0]
-      var new_cell = new_row.insertCell(new_row.childNodes.length);
-      var new_CheckBox = cE('input');
-      new_CheckBox.setAttribute('type', 'checkbox', 0);
-      new_CheckBox.setAttribute('checked', 'true', 0);
-      new_CheckBox.value = ary_TitleData[i];
-      new_CheckBox.title = ary_TitleData[i];
-      new_CheckBox.id = 'optSelect' + i;
-      new_cell.appendChild(new_CheckBox);
-
-      var new_span = cE('span');
-      new_span.appendChild(cT(ary_TitleData[i]));
-      new_span.title = ary_TitleData[i];
-      new_span.id = i;
-      sC(new_span, 'cbox');
-      new_span.onclick = function() {chgFlag(this.id);}
-      new_cell.appendChild(new_span);
-   }
 
    gID('optImage').disabled = false;
 
@@ -96,22 +71,6 @@ function startup() {
    // Row[0]
    var new_row = tbl_foot_Select.insertRow(tbl_foot_Select.rows.length);
    sC(new_row, "opt_foot");
-
-   var new_cell = new_row.insertCell(new_row.childNodes.length);
-   new_cell.setAttribute('colspan', int_Colspan, 0);
-   var new_CheckBox = cE('input');
-   new_CheckBox.setAttribute('type', 'checkbox', 0);
-   new_CheckBox.setAttribute('checked', 'true', 0);
-   new_CheckBox.value = "All";
-   new_CheckBox.title = "All boxes are checked/unchecked at the same time.";
-   new_CheckBox.id = 'optSelect_all';
-   new_CheckBox.onclick = function() {chgAll();}
-   new_cell.appendChild(new_CheckBox);
-
-   var new_span = cE('span');
-   new_span.appendChild(cT("Select All"));
-   new_cell.appendChild(new_span);
-
 
    if (!bln_ProgessBar) fCG(sID, iGM, iGM);
 }
@@ -143,23 +102,12 @@ function init(){
    // ソート対象のみを抽出
    for (i=0; i<ary_CharacterData.length; i++) {
       for (j=0; j<ary_TitleData.length; j++) {
-         if (gID('optSelect' + j).checked && (ary_CharacterData[i][2][j] == 1)) {
+         if ((ary_CharacterData[i][2][j] == 1)) {
             ary_TempData[int_Total] = ary_CharacterData[i];
             int_Total++;
             break;
          }
       }
-   }
-
-   if (int_Total == 0) {
-      alert("Please make a selection.");
-      return;
-   } else {
-      for (i=0; i<ary_TitleData.length; i++) {
-         gID('optSelect' + i).disabled = true;
-         gID('optSelect' + i).style.dsiplay = 'none';
-      }
-      gID('optImage').disabled = true;
    }
 
    int_Total = 0;

@@ -75,22 +75,13 @@ var ary_CharacterData = [
   [1, "Last Hope",                                        [0,1,0,0,0,0,0,0,0,0,0,0], "albums/AdvanceGeneration.jpg"],
 
   [1, "SPICE!",                                           [0,0,1,0,0,0,0,0,0,0,0,0], "albums/SpiceX.jpg"],
-  [1, "Bite the bullet",                                  [0,0,1,0,0,0,0,0,0,0,0,0], "albums/SpiceX.jpg"],
-  [1, "Nocturne",                                         [0,0,1,0,0,0,0,0,0,0,0,0], "albums/SpiceX.jpg"],
-  [1, "iCON",                                             [0,0,,0,0,0,0,0,0,0,0,0], "albums/SpiceX.jpg"],
-  [1, "be with you",                                      [0,0,1,0,0,0,0,0,0,0,0,0], "albums/SpiceX.jpg"],
 
-  [1, "KICKASS",                                          [0,0,0,1,0,0,0,0,0,0,0,0], "albums/DreamUp.jpg"],
   [1, "Repaint",                                          [0,0,0,1,0,0,0,0,0,0,0,0], "albums/DreamUp.jpg"],
-  [1, "twinkle",                                          [0,0,0,1,0,0,0,0,0,0,0,0], "albums/DreamUp.jpg"],
   [1, "エンドロール",                                       [0,0,0,1,0,0,0,0,0,0,0,0], "albums/DreamUp.jpg"],
-  [1, "NEO FUTURE",                                       [0,0,0,1,0,0,0,0,0,0,0,0], "albums/DreamUp.jpg"],
 
-  [1, "CRY OUT",                                          [0,0,0,0,1,0,0,0,0,0,0,0], "albums/D-X.jpg"],
   [1, "DISCORD",                                          [0,0,0,0,1,0,0,0,0,0,0,0], "albums/D-X.jpg"],
   [1, "Spoopy",                                           [0,0,0,0,1,0,0,0,0,0,0,0], "albums/D-X.jpg"],
   [1, "Answer",                                           [0,0,0,0,1,0,0,0,0,0,0,0], "albums/D-X.jpg"],
-  [1, "シグナル",                                          [0,0,0,0,1,0,0,0,0,0,0,0], "albums/D-X.jpg"],
 
   [1, "VOLTAGE",                                          [0,0,0,0,0,1,0,0,0,0,0,0], "albums/Reconstruction.jpg"],
   [1, "No Regret",                                        [0,0,0,0,0,,0,0,0,0,0,0], "albums/Reconstruction.jpg"],
@@ -111,18 +102,7 @@ var ary_CharacterData = [
   [1, "Alive",                                            [0,0,0,0,0,0,0,0,1,0,0,0], "albums/Underground.jpg"],
   [1, "Wake up !!!",                                      [0,0,0,0,0,0,0,0,1,0,0,0], "albums/Underground.jpg"],
   [1, "VS",                                               [0,0,0,0,0,0,0,0,1,0,0,0], "albums/Underground.jpg"],
-
-  [1, "RIDE ON",                                          [0,0,0,0,0,0,0,0,0,1,0,0], "albums/WeAreTheWorld.jpg"],
-  [1, "SURVIVOR",                                         [0,0,0,0,0,0,0,0,0,1,0,0], "albums/WeAreTheWorld.jpg"],
-  [1, "Brand New World",                                  [0,0,0,0,0,0,0,0,0,1,0,0], "albums/WeAreTheWorld.jpg"],
-
-  [1, "JUST FIGHT",                                       [0,0,0,0,0,0,0,0,0,0,1,0], "albums/JustDoIt.jpg"],
-  [1, "Ambivalent",                                       [0,0,0,0,0,0,0,0,0,0,1,0], "albums/JustDoIt.jpg"],
-  [1, "Re:ply",                                           [0,0,0,0,0,0,0,0,0,0,1,0], "albums/JustDoIt.jpg"],
-
-  [1, "Continue",                                         [0,0,0,0,0,0,0,0,0,0,0,1], "albums/Continue.jpg"],
-  [1, "Last Hope",                                        [0,0,0,0,0,0,0,0,0,0,0,1], "albums/Continue.jpg"],
+    
   [1, "シリアスゲーム",                                     [0,0,0,0,0,0,0,0,0,0,0,1], "albums/Continue.jpg"],
-  [1, "CHANGE",                                           [0,0,0,0,0,0,0,0,0,0,0,1], "albums/Continue.jpg"],  
   [1, "Continue～Instrumental～",                          [0,0,0,0,0,0,0,0,0,0,0,1], "albums/Continue.jpg"],
 ];
