@@ -60,7 +60,7 @@ var ary_CharacterData = [
   [1, "U",                                                [1,0,0,0,0,0,0,0,0,0,0,0,0], "albums/DUX.png"],
   [1, "Bite the bullet",                                  [1,0,0,0,0,0,0,0,0,0,0,0,0], "albums/DUX.png"],
   [1, "CRY OUT",                                          [1,0,0,0,0,0,0,0,0,0,0,0,0], "albums/DUX.png"],
-  [1, "シグナル",                                          [1,0,0,0,0,0,0,0,0,0,0,0,0], "albums/DUX.png"],
+  [1, "シグナル (Signal)",                                  [1,0,0,0,0,0,0,0,0,0,0,0,0], "albums/DUX.png"],
     
   [1, "Opening -the return of us-",                       [0,1,0,0,0,0,0,0,0,0,0,0,0], "albums/AdvanceGeneration.jpg"],
   [1, "JUST FIGHT",                                       [0,1,0,0,0,0,0,0,0,0,0,0,0], "albums/AdvanceGeneration.jpg"],
@@ -78,7 +78,7 @@ var ary_CharacterData = [
   [1, "SPICE!",                                           [0,0,1,0,0,0,0,0,0,0,0,0,0], "albums/SpiceX.jpg"],
 
   [1, "Repaint",                                          [0,0,0,1,0,0,0,0,0,0,0,0,0], "albums/DreamUp.jpg"],
-  [1, "エンドロール",                                       [0,0,0,1,0,0,0,0,0,0,0,0,0], "albums/DreamUp.jpg"],
+  [1, "エンドロール (Endroll)",                             [0,0,0,1,0,0,0,0,0,0,0,0,0], "albums/DreamUp.jpg"],
 
   [1, "DISCORD",                                          [0,0,0,0,1,0,0,0,0,0,0,0,0], "albums/D-X.jpg"],
   [1, "Spoopy",                                           [0,0,0,0,1,0,0,0,0,0,0,0,0], "albums/D-X.jpg"],
@@ -104,12 +104,14 @@ var ary_CharacterData = [
   [1, "Wake up !!!",                                      [0,0,0,0,0,0,0,0,1,0,0,0,0], "albums/Underground.jpg"],
   [1, "VS",                                               [0,0,0,0,0,0,0,0,1,0,0,0,0], "albums/Underground.jpg"],
     
-  [1, "シリアスゲーム",                                     [0,0,0,0,0,0,0,0,0,0,0,1,0], "albums/Continue.jpg"],
+  [1, "シリアスゲーム (Serious Game)",                       [0,0,0,0,0,0,0,0,0,0,0,1,0], "albums/Continue.jpg"],
   [1, "Continue～Instrumental～",                          [0,0,0,0,0,0,0,0,0,0,0,1,0], "albums/Continue.jpg"],
     
   [1, "黎明ノ詩",                                           [0,0,0,0,0,0,0,0,0,0,0,0,1], "albums/BLUEDAWN.jpg"],
-  [1, "NEW ERA",                                           [0,0,0,0,0,0,0,0,0,0,0,0,1], "albums/BLUEDAWN.jpg"],
-  [1, "MIRACRAID",                                         [0,0,0,0,0,0,0,0,0,0,0,0,1], "albums/BLUEDAWN.jpg"],
-  [1, "恋のマジックポーション (cover)",                                [0,0,0,0,0,0,0,0,0,0,0,0,1], "albums/BLUEDAWN.jpg"],
-  [1, "カントリー・ロード (Country Roads cover)",                    [0,0,0,0,0,0,0,0,0,0,0,0,1], "albums/BLUEDAWN.jpg"],
+  [1, "NEW ERA",                                          [0,0,0,0,0,0,0,0,0,0,0,0,1], "albums/BLUEDAWN.jpg"],
+  [1, "MIRACRAID",                                        [0,0,0,0,0,0,0,0,0,0,0,0,1], "albums/BLUEDAWN.jpg"],
+  [1, "恋のマジックポーション (Love's Magic Potion cover)",     [0,0,0,0,0,0,0,0,0,0,0,0,1], "albums/BLUEDAWN.jpg"],
+  [1, "カントリー・ロード (Country Roads cover)",            [0,0,0,0,0,0,0,0,0,0,0,0,1], "albums/BLUEDAWN.jpg"],
+  
+  [1, "メイヒテンセイ (Meihi Tensei",                       [0,0,0,0,0,0,0,0,0,0,0,0,1], "albums/MeihiTensei.png"],
 ];
