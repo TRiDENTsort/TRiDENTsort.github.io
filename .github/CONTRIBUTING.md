@@ -108,4 +108,23 @@ for (const a of ALBUMS) console.log(a.year ?? '----', '-', a.title, '(' + a.song
 "
 ```
 
+The output should look similar to this: 
+
+```
+12 albums
+66 songs total
+2020 - Continue / To be Continued... (5 songs)
+2021 - ADVANCE GENERATION (12 songs)
+2021 - OVER GROUND (3 songs)
+2021 - UNDER GROUND (3 songs)
+2021 - 再構創 (Reconstruction) (5 songs)
+2022 - D-X (5 songs)
+2022 - 再構創Ⅱ (Reconstruction II) (5 songs)
+2023 - Dream Up (5 songs)
+2024 - DUX (12 songs)
+2024 - spice "X" (5 songs)
+2025 - BLUE DAWN (5 songs)
+2026 - メイヒテンセイ (Meihi Tensei) (1 songs) [single]
+```
+
 If the script throws an error, you have a syntax issue in `data.js` — usually a missing comma or unclosed quote.
