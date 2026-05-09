@@ -159,13 +159,16 @@ function cardContent(card, item) {
   img.src = item.album.cover;
   img.alt = item.album.title;
   img.className = "card__img";
+  const text = document.createElement("div");
+  text.className = "card__text";
   const title = document.createElement("span");
   title.className = "card__title";
   title.textContent = item.title;
   const album = document.createElement("span");
   album.className = "card__album";
   album.textContent = item.album.title;
-  card.append(img, title, album);
+  text.append(title, album);
+  card.append(img, text);
 }
 
 function renderComparison() {
