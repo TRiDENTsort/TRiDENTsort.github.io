@@ -41,6 +41,7 @@ const SINGLES_TILE = SINGLES.length === 0 ? null : {
   id: SINGLES_TILE_ID,
   title: "Singles",
   cover: "img/bandphoto.jpg",
+  songCount: SINGLES.reduce((n, s) => n + s.songs.length, 0),
 };
 
 function gridEntries() {
@@ -86,11 +87,15 @@ function renderAlbumGrid() {
     title.textContent = entry.title;
     meta.append(title);
 
-    if (entry.year != null) {
-      const year = document.createElement("span");
-      year.className = "album-card__year";
-      year.textContent = entry.year;
-      meta.append(year);
+    const subParts = [];
+    if (entry.year != null) subParts.push(String(entry.year));
+    const songCount = entry.songs?.length ?? entry.songCount ?? 0;
+    if (songCount > 0) subParts.push(songCount === 1 ? "1 song" : `${songCount} songs`);
+    if (subParts.length > 0) {
+      const sub = document.createElement("span");
+      sub.className = "album-card__sub";
+      sub.textContent = subParts.join(" · ");
+      meta.append(sub);
     }
 
     cb.addEventListener("change", () => {
