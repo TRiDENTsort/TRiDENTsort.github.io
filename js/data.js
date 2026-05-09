@@ -3,7 +3,10 @@
 //   title  - human-readable album name (shown in UI)
 //   year   - release year (used to sort albums chronologically)
 //   cover  - path to cover image, relative to the page
-//   songs  - array of song titles in track order (duplicates across albums are fine)
+//   songs  - array of song objects in track order. Each song is { title, translation? }:
+//              title       — the song's primary title
+//              translation — (optional) English / romaji rendering shown as subtext
+//            Duplicate titles across albums are fine; each instance is treated separately.
 //   single - (optional) true if this is a standalone single — gets bundled into the
 //            "Singles" tile on the album grid instead of getting its own tile.
 //
@@ -17,18 +20,18 @@ const RAW_ALBUMS = [
     year: 2021,
     cover: "img/albums/AdvanceGeneration.jpg",
     songs: [
-      "Opening -the return of us-",
-      "JUST FIGHT",
-      "IMAGINATION",
-      "RIDE ON",
-      "SURVIVOR",
-      "Dystopia",
-      "Ambivalent",
-      "Brand New World",
-      "Continue",
-      "Supernova",
-      "Re:ply",
-      "Last Hope",
+      { title: "Opening -the return of us-" },
+      { title: "JUST FIGHT" },
+      { title: "IMAGINATION" },
+      { title: "RIDE ON" },
+      { title: "SURVIVOR" },
+      { title: "Dystopia" },
+      { title: "Ambivalent" },
+      { title: "Brand New World" },
+      { title: "Continue" },
+      { title: "Supernova" },
+      { title: "Re:ply" },
+      { title: "Last Hope" },
     ],
   },
   {
@@ -37,11 +40,11 @@ const RAW_ALBUMS = [
     year: 2025,
     cover: "img/albums/BLUEDAWN.jpg",
     songs: [
-      "黎明ノ詩",
-      "NEW ERA",
-      "MIRACRAID",
-      "恋のマジックポーション (Love's Magic Potion cover)",
-      "カントリー・ロード (Country Roads cover)",
+      { title: "黎明ノ詩", translation: "Poem of the Dawn" },
+      { title: "NEW ERA" },
+      { title: "MIRACRAID" },
+      { title: "恋のマジックポーション", translation: "Love's Magic Potion cover" },
+      { title: "カントリー・ロード", translation: "Country Roads cover" },
     ],
   },
   {
@@ -50,11 +53,11 @@ const RAW_ALBUMS = [
     year: 2020,
     cover: "img/albums/Continue.jpg",
     songs: [
-      "Continue",
-      "Last Hope",
-      "CHANGE",
-      "シリアスゲーム (Serious Game)",
-      "Continue～Instrumental～",
+      { title: "Continue" },
+      { title: "Last Hope" },
+      { title: "CHANGE" },
+      { title: "シリアスゲーム", translation: "Serious Game" },
+      { title: "Continue ～Instrumental～" },
     ],
   },
   {
@@ -63,11 +66,11 @@ const RAW_ALBUMS = [
     year: 2022,
     cover: "img/albums/D-X.jpg",
     songs: [
-      "CRY OUT",
-      "DISCORD",
-      "Spoopy",
-      "Answer",
-      "シグナル (Signal)"
+      { title: "CRY OUT" },
+      { title: "DISCORD" },
+      { title: "Spoopy" },
+      { title: "Answer" },
+      { title: "シグナル", translation: "Signal" },
     ],
   },
   {
@@ -76,11 +79,11 @@ const RAW_ALBUMS = [
     year: 2023,
     cover: "img/albums/DreamUp.jpg",
     songs: [
-      "KICKASS",
-      "Repaint",
-      "twinkle",
-      "エンドロール (Endroll)",
-      "NEO FUTURE"
+      { title: "KICKASS" },
+      { title: "Repaint" },
+      { title: "twinkle" },
+      { title: "エンドロール", translation: "Endroll" },
+      { title: "NEO FUTURE" },
     ],
   },
   {
@@ -89,18 +92,18 @@ const RAW_ALBUMS = [
     year: 2024,
     cover: "img/albums/DUX.png",
     songs: [
-      "Opening -follow the DUX-",
-      "KICKASS",
-      "iCON",
-      "Haha!",
-      "twinkle",
-      "NEO FUTURE",
-      "be with you",
-      "Nocturne",
-      "U",
-      "Bite the bullet",
-      "CRY OUT",
-      "シグナル (Signal)",
+      { title: "Opening -follow the DUX-" },
+      { title: "KICKASS" },
+      { title: "iCON" },
+      { title: "Haha!" },
+      { title: "twinkle" },
+      { title: "NEO FUTURE" },
+      { title: "be with you" },
+      { title: "Nocturne" },
+      { title: "U" },
+      { title: "Bite the bullet" },
+      { title: "CRY OUT" },
+      { title: "シグナル", translation: "Signal" },
     ],
   },
   {
@@ -109,9 +112,9 @@ const RAW_ALBUMS = [
     year: 2021,
     cover: "img/albums/Overground.png",
     songs: [
-      "DISTINATION",
-      "After rain",
-      "Think of",
+      { title: "DISTINATION" },
+      { title: "After rain" },
+      { title: "Think of" },
     ],
   },
   {
@@ -120,11 +123,11 @@ const RAW_ALBUMS = [
     year: 2024,
     cover: "img/albums/SpiceX.jpg",
     songs: [
-      "SPICE!",
-      "Bite the bullet",
-      "Nocturne",
-      "iCON",
-      "be with you"
+      { title: "SPICE!" },
+      { title: "Bite the bullet" },
+      { title: "Nocturne" },
+      { title: "iCON" },
+      { title: "be with you" },
     ],
   },
   {
@@ -133,9 +136,9 @@ const RAW_ALBUMS = [
     year: 2021,
     cover: "img/albums/Underground.jpg",
     songs: [
-      "Alive",
-      "Wake up !!!",
-      "VS",
+      { title: "Alive" },
+      { title: "Wake up !!!" },
+      { title: "VS" },
     ],
   },
   {
@@ -145,7 +148,7 @@ const RAW_ALBUMS = [
     cover: "img/albums/MeihiTensei.png",
     single: true,
     songs: [
-      "メイヒテンセイ (Meihi Tensei)",
+      { title: "メイヒテンセイ)", translation: "Meihi Tensei" },
     ],
   },
   {
@@ -154,11 +157,11 @@ const RAW_ALBUMS = [
     year: 2021,
     cover: "img/albums/Reconstruction.jpg",
     songs: [
-      "VOLTAGE",
-      "No Regret",
-      "STEP BY STEP",
-      "CHANGE",
-      "START",
+      { title: "VOLTAGE" },
+      { title: "No Regret" },
+      { title: "STEP BY STEP" },
+      { title: "CHANGE" },
+      { title: "START" },
     ],
   },
   {
@@ -167,11 +170,11 @@ const RAW_ALBUMS = [
     year: 2022,
     cover: "img/albums/Reconstruction2.png",
     songs: [
-      "GO CRAZY",
-      "RESISTANCE",
-      "Utopia",
-      "Again",
-      "Never ending",
+      { title: "GO CRAZY" },
+      { title: "RESISTANCE" },
+      { title: "Utopia" },
+      { title: "Again" },
+      { title: "Never ending" },
     ],
   },
 ];
@@ -184,11 +187,11 @@ export function buildSongList(selectedAlbumIds) {
   const seen = new Set();
   for (const album of ALBUMS) {
     if (!selectedAlbumIds.has(album.id)) continue;
-    for (const title of album.songs) {
-      const key = title.trim().toLowerCase();
+    for (const song of album.songs) {
+      const key = song.title.trim().toLowerCase();
       if (seen.has(key)) continue;
       seen.add(key);
-      songs.push({ title, album });
+      songs.push({ title: song.title, translation: song.translation, album });
     }
   }
   return songs;

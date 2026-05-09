@@ -18,14 +18,14 @@ Open `js/data.js` and append a new object to `RAW_ALBUMS`. Order inside the arra
   {
     id: "blue-dawn",
     title: "BLUE DAWN",
-    year: 2024,
+    year: 2025,
     cover: "img/albums/BLUEDAWN.jpg",
     songs: [
-      "黎明ノ詩",
-      "NEW ERA",
-      "MIRACRAID",
-      "恋のマジックポーション (Love's Magic Potion cover)",
-      "カントリー・ロード (Country Roads cover)",
+      { title: "黎明ノ詩", translation: "Poem of the Dawn" },
+      { title: "NEW ERA" },
+      { title: "MIRACRAID" },
+      { title: "恋のマジックポーション", translation: "Love's Magic Potion cover" },
+      { title: "カントリー・ロード", translation: "Country Roads cover" },
     ],
   },
 ```
@@ -38,7 +38,7 @@ Open `js/data.js` and append a new object to `RAW_ALBUMS`. Order inside the arra
 | `title`  | yes      | Human-readable title. Japanese OK. Include edition suffixes verbatim if relevant.                                                              |
 | `year`   | yes\*    | Integer release year. Used for chronological sorting on the album-select page. Optional only on singles (see below).                           |
 | `cover`  | yes      | Path relative to the repo root. The UI prepends nothing — write the full `img/albums/...` path.                                                |
-| `songs`  | yes      | Array of strings, in track order. Duplicate titles across albums are de-duped automatically — only the first occurrence enters the sort.       |
+| `songs`  | yes      | Array of song objects in track order, shape `{ title, translation? }`. `title` is the primary title. Optional `translation` is shown as dim subtext (English/romaji). Duplicate titles across albums are de-duped automatically — only the first occurrence enters the sort. |
 | `single` | no       | Set to `true` for standalone singles. They don't get their own tile; they're bundled under the synthetic "Singles" tile. See section below.    |
 
 ### 4. Push your changes to GitHub
@@ -53,11 +53,11 @@ Same as adding an album, but include `single: true` on the entry. The song still
   {
     id: "meihi-tensei",
     title: "メイヒテンセイ (Meihi Tensei)",
-    year: 2025,
+    year: 2026,
     cover: "img/albums/MeihiTensei.png",
     single: true,
     songs: [
-      "メイヒテンセイ (Meihi Tensei)",
+      { title: "メイヒテンセイ", translation: "Meihi Tensei" },
     ],
   },
 ```
@@ -66,7 +66,7 @@ If no entries have `single: true`, the Singles tile is hidden entirely.
 
 ## Adding songs to an existing album
 
-Find the album in `RAW_ALBUMS` and add the song title to its `songs` array. The order you list them in is the order they appear if anyone inspects the data — it does not affect the sort.
+Find the album in `RAW_ALBUMS` and add the song object to its `songs` array. The order you list them in is the order they appear if anyone inspects the data — it does not affect the sort.
 
 ## Renaming or removing an album
 
@@ -76,7 +76,7 @@ Find the album in `RAW_ALBUMS` and add the song title to its `songs` array. The 
 
 ## Fixing a song title
 
-Just edit the string in the appropriate `songs` array. Be careful with punctuation: full-width vs. half-width characters (`（` vs. `(`), Japanese vs. English transliteration, and remix suffixes are all visible in the UI exactly as written.
+Edit the `title` (or `translation`) string on the appropriate song object. Be careful with punctuation: full-width vs. half-width characters (`（` vs. `(`), Japanese vs. English transliteration, and remix suffixes are all visible in the UI exactly as written.
 
 ## Testing locally
 
@@ -108,7 +108,7 @@ for (const a of ALBUMS) console.log(a.year ?? '----', '-', a.title, '(' + a.song
 "
 ```
 
-The output should look similar to this: 
+The output should look similar to this:
 
 ```
 12 albums
@@ -128,3 +128,14 @@ The output should look similar to this:
 ```
 
 If the script throws an error, you have a syntax issue in `data.js` — usually a missing comma or unclosed quote.
+
+## Image sizes
+
+When adding new cover art or photos, target these dimensions. The site already displays at much smaller sizes, so larger sources just waste bandwidth.
+
+| Image                        | Recommended                                   | Reason                                                                                                      |
+|------------------------------|-----------------------------------------------|-------------------------------------------------------------------------------------------------------------|
+| Album covers                 | 600×600                                       | Largest on-page display is the 240px battle card; 600px gives 2× retina headroom. ~70KB after mozjpeg q=85. |
+| Band photo (`bandphoto.jpg`) | 1200×1200 or 1200×630                         | Used as the `og:image` for Discord / Twitter / Slack embeds. Only loaded when someone shares the URL.       |
+| Logo (`TridentLogo.png`)     | ~500×500                                      | Displayed at 33px in the page header; retina-2x is 66px, so anything above ~150px is plenty.                |
+| Favicon                      | 32×32 `.ico` + 144×144 `apple-touch-icon.png` | Standard browser tab and iOS home-screen sizes.                                                             |
