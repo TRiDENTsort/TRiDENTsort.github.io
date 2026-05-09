@@ -7,6 +7,7 @@
   --text: #f5f5f5;
   --text-dim: #9a9a9a;
   --accent: #ec86a6;
+  --accent-bloom: rgba(236, 134, 166, 0.45);
   --accent-hover: #f4a4bd;
   --accent-glow: rgba(236, 134, 166, 0.32);
   --radius: 14px;
@@ -38,7 +39,7 @@ body::before {
   position: fixed;
   inset: 0;
   background: radial-gradient(ellipse 100% 75% at 50% -10%,
-  rgba(236, 134, 166, 0.45),
+  var(--accent-bloom),
   transparent 70%);
   pointer-events: none;
   z-index: 0;
