@@ -185,8 +185,9 @@ export function buildSongList(selectedAlbumIds) {
   for (const album of ALBUMS) {
     if (!selectedAlbumIds.has(album.id)) continue;
     for (const title of album.songs) {
-      if (seen.has(title)) continue;
-      seen.add(title);
+      const key = title.trim().toLowerCase();
+      if (seen.has(key)) continue;
+      seen.add(key);
       songs.push({ title, album });
     }
   }
