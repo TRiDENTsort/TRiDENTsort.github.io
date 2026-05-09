@@ -8,32 +8,13 @@
 //            "Singles" tile on the album grid instead of getting its own tile.
 //
 // Albums are sorted by year on export, so insertion order in this array does not matter.
+// Source order below is alphabetical by title to make manual edits easier to scan.
 
 const RAW_ALBUMS = [
   {
-    id: "dux",
-    title: "DUX",
-    year: 2016,
-    cover: "img/albums/DUX.png",
-    songs: [
-      "Opening -follow the DUX-",
-      "KICKASS",
-      "iCON",
-      "Haha!",
-      "twinkle",
-      "NEO FUTURE",
-      "be with you",
-      "Nocturne",
-      "U",
-      "Bite the bullet",
-      "CRY OUT",
-      "シグナル (Signal)",
-    ],
-  },
-  {
     id: "advance-generation",
     title: "ADVANCE GENERATION",
-    year: 2017,
+    year: 2021,
     cover: "img/albums/AdvanceGeneration.jpg",
     songs: [
       "Opening -the return of us-",
@@ -51,96 +32,9 @@ const RAW_ALBUMS = [
     ],
   },
   {
-    id: "spice-x",
-    title: "spice \"X\"",
-    year: 2018,
-    cover: "img/albums/SpiceX.jpg",
-    songs: [
-      "SPICE!",
-    ],
-  },
-  {
-    id: "dream-up",
-    title: "Dream Up",
-    year: 2018,
-    cover: "img/albums/DreamUp.jpg",
-    songs: [
-      "Repaint",
-      "エンドロール (Endroll)",
-    ],
-  },
-  {
-    id: "d-x",
-    title: "D-X",
-    year: 2019,
-    cover: "img/albums/D-X.jpg",
-    songs: [
-      "DISCORD",
-      "Spoopy",
-      "Answer",
-    ],
-  },
-  {
-    id: "reconstruction",
-    title: "再構創 (Reconstruction)",
-    year: 2019,
-    cover: "img/albums/Reconstruction.jpg",
-    songs: [
-      "VOLTAGE",
-      "STEP BY STEP",
-      "CHANGE",
-      "START",
-    ],
-  },
-  {
-    id: "reconstruction-2",
-    title: "再構創Ⅱ (Reconstruction II)",
-    year: 2020,
-    cover: "img/albums/Reconstruction2.png",
-    songs: [
-      "GO CRAZY",
-      "RESISTANCE",
-      "Utopia",
-      "Again",
-      "Never ending",
-    ],
-  },
-  {
-    id: "over-ground",
-    title: "OVER GROUND",
-    year: 2020,
-    cover: "img/albums/Overground.png",
-    songs: [
-      "DISTINATION",
-      "After rain",
-      "Think of",
-    ],
-  },
-  {
-    id: "under-ground",
-    title: "UNDER GROUND",
-    year: 2020,
-    cover: "img/albums/Underground.jpg",
-    songs: [
-      "Alive",
-      "Wake up !!!",
-      "VS",
-    ],
-  },
-  {
-    id: "continue",
-    title: "Continue / To be Continued...",
-    year: 2022,
-    cover: "img/albums/Continue.jpg",
-    songs: [
-      "シリアスゲーム (Serious Game)",
-      "Continue～Instrumental～",
-    ],
-  },
-  {
     id: "blue-dawn",
     title: "BLUE DAWN",
-    year: 2024,
+    year: 2025,
     cover: "img/albums/BLUEDAWN.jpg",
     songs: [
       "黎明ノ詩",
@@ -151,13 +45,133 @@ const RAW_ALBUMS = [
     ],
   },
   {
+    id: "continue",
+    title: "Continue / To be Continued...",
+    year: 2020,
+    cover: "img/albums/Continue.jpg",
+    songs: [
+      "Continue",
+      "Last Hope",
+      "CHANGE",
+      "シリアスゲーム (Serious Game)",
+      "Continue～Instrumental～",
+    ],
+  },
+  {
+    id: "d-x",
+    title: "D-X",
+    year: 2022,
+    cover: "img/albums/D-X.jpg",
+    songs: [
+      "CRY OUT",
+      "DISCORD",
+      "Spoopy",
+      "Answer",
+      "シグナル (Signal)"
+    ],
+  },
+  {
+    id: "dream-up",
+    title: "Dream Up",
+    year: 2023,
+    cover: "img/albums/DreamUp.jpg",
+    songs: [
+      "KICKASS",
+      "Repaint",
+      "twinkle",
+      "エンドロール (Endroll)",
+      "NEO FUTURE"
+    ],
+  },
+  {
+    id: "dux",
+    title: "DUX",
+    year: 2024,
+    cover: "img/albums/DUX.png",
+    songs: [
+      "Opening -follow the DUX-",
+      "KICKASS",
+      "iCON",
+      "Haha!",
+      "twinkle",
+      "NEO FUTURE",
+      "be with you",
+      "Nocturne",
+      "U",
+      "Bite the bullet",
+      "CRY OUT",
+      "シグナル (Signal)",
+    ],
+  },
+  {
+    id: "over-ground",
+    title: "OVER GROUND",
+    year: 2021,
+    cover: "img/albums/Overground.png",
+    songs: [
+      "DISTINATION",
+      "After rain",
+      "Think of",
+    ],
+  },
+  {
+    id: "spice-x",
+    title: "spice \"X\"",
+    year: 2024,
+    cover: "img/albums/SpiceX.jpg",
+    songs: [
+      "SPICE!",
+      "Bite the bullet",
+      "Nocturne",
+      "iCON",
+      "be with you"
+    ],
+  },
+  {
+    id: "under-ground",
+    title: "UNDER GROUND",
+    year: 2021,
+    cover: "img/albums/Underground.jpg",
+    songs: [
+      "Alive",
+      "Wake up !!!",
+      "VS",
+    ],
+  },
+  {
     id: "meihi-tensei",
     title: "メイヒテンセイ (Meihi Tensei)",
-    year: 2025,
+    year: 2026,
     cover: "img/albums/MeihiTensei.png",
     single: true,
     songs: [
       "メイヒテンセイ (Meihi Tensei)",
+    ],
+  },
+  {
+    id: "reconstruction",
+    title: "再構創 (Reconstruction)",
+    year: 2021,
+    cover: "img/albums/Reconstruction.jpg",
+    songs: [
+      "VOLTAGE",
+      "No Regret",
+      "STEP BY STEP",
+      "CHANGE",
+      "START",
+    ],
+  },
+  {
+    id: "reconstruction-2",
+    title: "再構創Ⅱ (Reconstruction II)",
+    year: 2022,
+    cover: "img/albums/Reconstruction2.png",
+    songs: [
+      "GO CRAZY",
+      "RESISTANCE",
+      "Utopia",
+      "Again",
+      "Never ending",
     ],
   },
 ];
