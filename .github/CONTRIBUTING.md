@@ -4,7 +4,7 @@ Thanks for helping keep the TRiDENT Song Sorter up to date. The most common cont
 
 ## Testing locally
 
-The site uses ES modules, which require an HTTP server (won't work via `file://`). 
+The site uses ES modules, which require an HTTP server (won't work via `file://`).
 
 ### Before you begin
 
@@ -61,7 +61,7 @@ If the script throws an error, you have a syntax issue in `data.js`, usually a m
 When adding new cover art or photos, target these dimensions. The site already displays at much smaller sizes, so larger sources just waste bandwidth.
 
 | Image                        | Recommended                                   | Reason                                                                                                      |
-|------------------------------|-----------------------------------------------|-------------------------------------------------------------------------------------------------------------|
+| ---------------------------- | --------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
 | Album covers                 | 600×600                                       | Largest on-page display is the 240px battle card; 600px gives 2× retina headroom. ~70KB after mozjpeg q=85. |
 | Band photo (`bandphoto.jpg`) | 1200×1200 or 1200×630                         | Used as the `og:image` for Discord / Twitter / Slack embeds. Only loaded when someone shares the URL.       |
 | Logo (`TridentLogo.png`)     | ~500×500                                      | Displayed at 33px in the page header; retina-2x is 66px, so anything above ~150px is plenty.                |
