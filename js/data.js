@@ -10,8 +10,8 @@
 //   single - (optional) true if this is a standalone single — gets bundled into the
 //            "Singles" tile on the album grid instead of getting its own tile.
 //
-// Albums are sorted by year on export, so insertion order in this array does not matter.
-// Source order below is alphabetical by title to make manual edits easier to scan.
+// Albums are listed alphabetically by title in this file for easier maintenance.
+// At runtime they are sorted by year on export, so file order does not affect the UI.
 
 const RAW_ALBUMS = [
   {
@@ -119,7 +119,7 @@ const RAW_ALBUMS = [
   },
   {
     id: "spice-x",
-    title: "spice \"X\"",
+    title: 'spice "X"',
     year: 2024,
     cover: "img/albums/SpiceX.jpg",
     songs: [
@@ -147,9 +147,7 @@ const RAW_ALBUMS = [
     year: 2026,
     cover: "img/albums/MeihiTensei.png",
     single: true,
-    songs: [
-      { title: "メイヒテンセイ)", translation: "Meihi Tensei" },
-    ],
+    songs: [{ title: "メイヒテンセイ)", translation: "Meihi Tensei" }],
   },
   {
     id: "reconstruction",
