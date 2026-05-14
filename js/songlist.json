@@ -3,7 +3,7 @@
     "id": "continue",
     "title": "Continue / To be Continued...",
     "year": 2020,
-    "cover": "img/albums/Continue.jpg",
+    "cover": "img/albums/continue.jpg",
     "songs": [
       {
         "title": "Continue"
@@ -27,7 +27,7 @@
     "id": "advance-generation",
     "title": "ADVANCE GENERATION",
     "year": 2021,
-    "cover": "img/albums/AdvanceGeneration.jpg",
+    "cover": "img/albums/advanceGeneration.jpg",
     "songs": [
       {
         "title": "Opening -the return of us-"
@@ -71,7 +71,7 @@
     "id": "over-ground",
     "title": "OVER GROUND",
     "year": 2021,
-    "cover": "img/albums/Overground.png",
+    "cover": "img/albums/overGround.png",
     "songs": [
       {
         "title": "DISTINATION"
@@ -88,7 +88,7 @@
     "id": "under-ground",
     "title": "UNDER GROUND",
     "year": 2021,
-    "cover": "img/albums/Underground.jpg",
+    "cover": "img/albums/underGround.jpg",
     "songs": [
       {
         "title": "Alive"
@@ -105,7 +105,7 @@
     "id": "reconstruction",
     "title": "再構創 (Reconstruction)",
     "year": 2021,
-    "cover": "img/albums/Reconstruction.jpg",
+    "cover": "img/albums/reconstruction.jpg",
     "songs": [
       {
         "title": "VOLTAGE"
@@ -128,7 +128,7 @@
     "id": "d-x",
     "title": "D-X",
     "year": 2022,
-    "cover": "img/albums/D-X.jpg",
+    "cover": "img/albums/dX.jpg",
     "songs": [
       {
         "title": "CRY OUT"
@@ -152,7 +152,7 @@
     "id": "reconstruction-2",
     "title": "再構創Ⅱ (Reconstruction II)",
     "year": 2022,
-    "cover": "img/albums/Reconstruction2.png",
+    "cover": "img/albums/reconstruction2.png",
     "songs": [
       {
         "title": "GO CRAZY"
@@ -175,7 +175,7 @@
     "id": "dream-up",
     "title": "Dream Up",
     "year": 2023,
-    "cover": "img/albums/DreamUp.jpg",
+    "cover": "img/albums/dreamUp.jpg",
     "songs": [
       {
         "title": "KICKASS"
@@ -199,7 +199,7 @@
     "id": "dux",
     "title": "DUX",
     "year": 2024,
-    "cover": "img/albums/DUX.png",
+    "cover": "img/albums/dux.png",
     "songs": [
       {
         "title": "Opening -follow the DUX-"
@@ -244,7 +244,7 @@
     "id": "spice-x",
     "title": "spice \"X\"",
     "year": 2024,
-    "cover": "img/albums/SpiceX.jpg",
+    "cover": "img/albums/spiceX.jpg",
     "songs": [
       {
         "title": "SPICE!"
@@ -267,7 +267,7 @@
     "id": "blue-dawn",
     "title": "BLUE DAWN",
     "year": 2025,
-    "cover": "img/albums/BLUEDAWN.jpg",
+    "cover": "img/albums/blueDawn.jpg",
     "songs": [
       {
         "title": "黎明ノ詩",
@@ -293,7 +293,7 @@
     "id": "meihi-tensei",
     "title": "メイヒテンセイ (Meihi Tensei)",
     "year": 2026,
-    "cover": "img/albums/MeihiTensei.png",
+    "cover": "img/albums/meihiTensei.png",
     "isSingle": true,
     "songs": [
       {

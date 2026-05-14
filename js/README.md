@@ -17,7 +17,7 @@ The file is a JSON array of album objects. Here's one of each kind: a full album
     "id": "dux",
     "title": "DUX",
     "year": 2024,
-    "cover": "img/albums/DUX.png",
+    "cover": "img/albums/dux.png",
     "songs": [
       { "title": "Opening -follow the DUX-" },
       { "title": "KICKASS" },
@@ -28,7 +28,7 @@ The file is a JSON array of album objects. Here's one of each kind: a full album
     "id": "meihi-tensei",
     "title": "メイヒテンセイ (Meihi Tensei)",
     "year": 2026,
-    "cover": "img/albums/MeihiTensei.png",
+    "cover": "img/albums/meihiTensei.png",
     "isSingle": true,
     "songs": [{ "title": "メイヒテンセイ", "translation": "Meihi Tensei" }]
   },
